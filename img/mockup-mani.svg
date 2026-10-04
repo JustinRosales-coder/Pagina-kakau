@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <defs>
+    <linearGradient id="bg2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2E1E12"/>
+      <stop offset="0.5" stop-color="#1C1109"/>
+      <stop offset="1" stop-color="#100906"/>
+    </linearGradient>
+    <linearGradient id="choc2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#7A4E28"/>
+      <stop offset="0.5" stop-color="#5C3A1C"/>
+      <stop offset="1" stop-color="#422811"/>
+    </linearGradient>
+    <linearGradient id="peanut" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#E0B472"/>
+      <stop offset="0.55" stop-color="#C88F4C"/>
+      <stop offset="1" stop-color="#A56F33"/>
+    </linearGradient>
+    <radialGradient id="light2" cx="0.35" cy="0.28" r="0.7">
+      <stop offset="0" stop-color="#E6C280" stop-opacity="0.15"/>
+      <stop offset="1" stop-color="#E6C280" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="800" height="600" fill="url(#bg2)"/>
+  <rect width="800" height="600" fill="url(#light2)"/>
+
+  <rect x="0" y="440" width="800" height="160" fill="#150C07"/>
+  <ellipse cx="400" cy="462" rx="270" ry="28" fill="#000" opacity="0.45"/>
+
+  <!-- Tableta de chocolate 60% con swirl de crema de maní -->
+  <g transform="translate(400,300) rotate(5)">
+    <rect x="-235" y="-145" width="470" height="290" rx="14" fill="url(#choc2)"/>
+    <rect x="-235" y="-145" width="470" height="290" rx="14" fill="none" stroke="#D4AF37" stroke-opacity="0.45" stroke-width="3"/>
+    <rect x="-219" y="-129" width="438" height="258" rx="8" fill="none" stroke="#D4AF37" stroke-opacity="0.18" stroke-width="1.5"/>
+
+    <g stroke="#331D0E" stroke-width="4" opacity="0.8">
+      <line x1="-78" y1="-129" x2="-78" y2="129"/>
+      <line x1="78" y1="-129" x2="78" y2="129"/>
+      <line x1="-219" y1="-43" x2="219" y2="-43"/>
+      <line x1="-219" y1="43" x2="219" y2="43"/>
+    </g>
+
+    <!-- Swirl de crema de maní -->
+    <path d="M-150 -95 q60 -34 120 -6 q60 28 120 -8 q52 -30 96 -4 l0 34 q-46 -24 -96 6 q-60 30 -120 2 q-60 -28 -120 8 z"
+          fill="url(#peanut)" opacity="0.95"/>
+    <path d="M-150 22 q60 -32 120 -4 q60 28 120 -10 q52 -28 96 -2 l0 32 q-46 -22 -96 8 q-60 28 -120 0 q-60 -26 -120 10 z"
+          fill="url(#peanut)" opacity="0.9"/>
+
+    <!-- Maníes enteros -->
+    <g fill="#D9A45F" stroke="#8E5D28" stroke-width="2">
+      <ellipse cx="-100" cy="-64" rx="26" ry="17" transform="rotate(-12 -100 -64)"/>
+      <ellipse cx="18" cy="-70" rx="24" ry="16" transform="rotate(8 18 -70)"/>
+      <ellipse cx="140" cy="-62" rx="25" ry="16" transform="rotate(-6 140 -62)"/>
+      <ellipse cx="-60" cy="58" rx="25" ry="16" transform="rotate(10 -60 58)"/>
+      <ellipse cx="88" cy="62" rx="26" ry="17" transform="rotate(-10 88 62)"/>
+    </g>
+    <g stroke="#8E5D28" stroke-width="1.4" opacity="0.7" fill="none">
+      <path d="M-114 -64 h28 M4 -70 h28 M126 -62 h28 M-74 58 h28 M74 62 h28"/>
+    </g>
+
+    <ellipse cx="-130" cy="-85" rx="86" ry="32" fill="#FFF" opacity="0.05" transform="rotate(-18)"/>
+
+    <!-- Etiqueta -->
+    <rect x="-118" y="-24" width="236" height="60" rx="6" fill="#0F0907" stroke="#D4AF37" stroke-width="1.5"/>
+    <text x="0" y="4" text-anchor="middle" font-family="Georgia,serif" font-size="23" fill="#E8D3A3" letter-spacing="3">CREMA DE MANÍ</text>
+    <text x="0" y="25" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#D4AF37" letter-spacing="5">60% CACAO</text>
+  </g>
+
+  <!-- Maníes sueltos en la mesa -->
+  <g fill="#D9A45F" stroke="#8E5D28" stroke-width="1.6">
+    <ellipse cx="130" cy="490" rx="24" ry="16" transform="rotate(16 130 490)"/>
+    <ellipse cx="640" cy="500" rx="22" ry="15" transform="rotate(-12 640 500)"/>
+    <ellipse cx="560" cy="462" rx="20" ry="13" transform="rotate(8 560 462)"/>
+    <ellipse cx="90" cy="516" rx="21" ry="14" transform="rotate(-8 90 516)"/>
+  </g>
+</svg>

@@ -1,0 +1,1336 @@
+/* Reset general */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #062318;
+  background-image: linear-gradient(180deg, #0B3B2A 0%, #062318 55%, #02130C 100%);
+  background-attachment: fixed;
+  color: #fff;
+  font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif;
+  padding-bottom: 50px;
+  min-height: 100vh;
+}
+
+/* Encabezado / Menú */
+.encabezado {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 14px 30px;
+  background-color: #000000;
+  border-bottom: 2px solid transparent;
+  border-image: linear-gradient(90deg, #2a2a2a 0%, #B8860B 25%, #FFD23F 50%, #B8860B 75%, #2a2a2a 100%) 1;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.menu a {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 14px 10px;
+  height: 100%;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 17px;
+  letter-spacing: 1.5px;
+  font-weight: 600;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.menu a + a {
+  border-left: 1px solid rgba(255, 255, 255, 0.15);
+  padding-left: 18px;
+}
+
+.menu a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 2px;
+  background: #FFD23F;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.menu a:hover {
+  color: #FFD23F;
+}
+
+.menu a:hover::after {
+  transform: scaleX(1);
+}
+
+/* Portada principal */
+.portada {
+  text-align: center;
+  padding: 50px 20px 60px 20px;
+}
+
+.subtitulo {
+  color: #e6c280;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* Logo principal en la portada */
+.logo-hero {
+  display: block;
+  width: 100%;
+  max-width: 540px;
+  height: auto;
+  margin: 1.5rem auto;
+}
+
+.portada p {
+  color: #ccc;
+  margin-bottom: 25px;
+  font-size: 16px;
+}
+
+.boton {
+  display: inline-block;
+  background-color: #e6c280;
+  color: #000;
+  padding: 10px 22px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 4px;
+  letter-spacing: 1px;
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.boton:hover {
+  background-color: #d4ae6e;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 15px rgba(230, 194, 128, 0.3);
+}
+
+/* Catálogo de Productos con Animaciones */
+.productos {
+  max-width: 1100px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+
+.productos h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  color: #E8D3A3;
+  font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif;
+  font-weight: 700;
+  font-size: 30px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.productos h2::after {
+  content: "";
+  display: block;
+  width: 90px;
+  height: 2px;
+  margin: 14px auto 0 auto;
+  background: linear-gradient(90deg, transparent, #d4af37, transparent);
+}
+
+.lista-chocolates {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+/* Tarjeta del chocolate con animación */
+.caja-chocolate {
+  background-color: #241611;
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  border-radius: 15px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.caja-chocolate:hover {
+  transform: translateY(-6px);
+  border-color: rgba(212, 175, 55, 0.5);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+}
+
+/* Altura fija e idéntica para todas las cabeceras de imagen */
+.imagen-contenedor {
+  display: block;
+  width: 100%;
+  height: 230px;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  flex-shrink: 0;
+  background-color: #1a0f0a;
+}
+
+.imagen-contenedor img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  border: none;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.3s ease;
+}
+
+.caja-chocolate:hover .imagen-contenedor img {
+  transform: scale(1.05);
+}
+
+/* Contenido de la tarjeta (rellena el alto sobrante) */
+.contenido-tarjeta {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+  min-height: 280px;
+  padding: 20px;
+}
+
+/* Etiqueta de porcentaje de cacao (cápsula dorada) */
+.tipo {
+  display: inline-block;
+  align-self: flex-start;
+  background-color: #d4af37;
+  color: #1c120e;
+  border: none;
+  border-radius: 20px;
+  padding: 3px 14px;
+  font-size: 0.78rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/* Detalle de presentación (ej. Tableta de 100g / Taza de 250ml) */
+.presentacion {
+  color: #d4af37;
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  opacity: 0.85;
+  text-transform: uppercase;
+}
+
+.caja-chocolate h3 {
+  margin: 14px 0 8px 0;
+  font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: #E8D3A3;
+}
+
+.caja-chocolate p {
+  color: #E8D3A3;
+  font-size: 13.5px;
+  line-height: 1.65;
+  margin-bottom: 18px;
+  opacity: 0.9;
+}
+
+/* Línea divisoria dorada sobre precio y botón */
+.precio-y-boton {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-top: auto;
+  border-top: 1px solid rgba(212, 175, 55, 0.25);
+  padding-top: 15px;
+}
+
+.precio {
+  font-weight: bold;
+  font-size: 18px;
+  color: #E8D3A3;
+}
+
+/* Boton Pedir - usado por los enlaces internos <a class="btn" href="#contacto"> */
+.btn {
+  display: inline-block;
+  background-color: #241611;
+  color: #fff;
+  text-decoration: none;
+  border: 1px solid #d4af37;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif;
+  font-weight: bold;
+  transition: transform 0.2s ease, background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #d4af37;
+  color: #1c120e;
+  border-color: #d4af37;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(212, 175, 55, 0.3);
+}
+
+/* ==========================================
+   COLECCIÓN DESTACADA
+   ========================================== */
+.seccion-coleccion {
+  max-width: 1100px;
+  margin: 80px auto;
+  padding: 0 20px;
+}
+
+.seccion-coleccion h2 {
+  text-align: center;
+  color: #e6c280;
+  font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.seccion-coleccion h2::after {
+  content: "";
+  display: block;
+  width: 90px;
+  height: 2px;
+  margin: 14px auto 0 auto;
+  background: linear-gradient(90deg, transparent, #d4af37, transparent);
+}
+
+.subtitulo-coleccion {
+  text-align: center;
+  color: #ccc;
+  font-size: 14px;
+  line-height: 1.7;
+  max-width: 620px;
+  margin: 16px auto 45px auto;
+}
+
+/* Bloque destacado: imagen a la izquierda, datos ordenados a la derecha */
+.coleccion-destacada {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: 40px;
+  align-items: center;
+  background-color: #241611;
+  border: 1px solid rgba(212, 175, 55, 0.25);
+  border-radius: 16px;
+  padding: 30px;
+  overflow: hidden;
+}
+
+.coleccion-imagen {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: 12px;
+  border: 1px solid rgba(212, 175, 55, 0.15);
+  background-color: #120b07;
+}
+
+.coleccion-imagen img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.4s ease;
+}
+
+.coleccion-destacada:hover .coleccion-imagen img {
+  transform: scale(1.04);
+}
+
+.coleccion-info h3 {
+  font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif;
+  font-size: 26px;
+  color: #E8D3A3;
+  margin-bottom: 12px;
+}
+
+.coleccion-descripcion {
+  color: #ccc;
+  font-size: 14px;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+/* Ficha de detalles en filas ordenadas */
+.coleccion-lista {
+  list-style: none;
+  width: 100%;
+  margin: 0 0 22px 0;
+  border-top: 1px solid rgba(212, 175, 55, 0.25);
+}
+
+.coleccion-lista li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.15);
+  font-size: 13px;
+}
+
+.coleccion-lista strong {
+  color: #e6c280;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.coleccion-lista span {
+  color: #aaa;
+  text-align: right;
+}
+
+.coleccion-precio {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  margin-bottom: 22px;
+}
+
+.coleccion-precio .precio-valor {
+  font-size: 30px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.coleccion-precio .precio-antes {
+  font-size: 14px;
+  color: #999;
+  text-decoration: line-through;
+}
+
+.coleccion-info .boton {
+  align-self: flex-start;
+}
+
+/* ==========================================
+   CONFIGURACIÓN DE LA SECCIÓN HISTORIA
+   ========================================== */
+.contenedor-historia-bandito {
+  position: relative;
+  max-width: 800px;
+  margin: 80px auto; /* Espacio normal entre secciones */
+  text-align: center;
+}
+
+/* Caja de Nuestra Historia (CAPA SUPERIOR CAFECITA) */
+.seccion-origen {
+  position: relative;
+  z-index: 2; /* Tapa completamente el cuerpo de Bandito */
+  background-color: #0f0907; /* Color cafecito/oscuro opaco */
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  border-radius: 12px;
+  padding: 45px 40px;
+}
+
+.seccion-origen h2 {
+  text-align: center;
+  color: #e6c280;
+  margin-bottom: 30px;
+  letter-spacing: 2px;
+  font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif;
+  text-transform: uppercase;
+}
+
+/* Línea divisoria dorada (80px) bajo el título */
+.seccion-origen h2::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 2px;
+  margin: 15px auto 30px auto;
+  background-color: #d4af37;
+}
+
+.contenido-origen p {
+  font-family: 'Arial Rounded MT Bold', 'Helvetica Rounded', Arial, sans-serif;
+  color: #e0d0b0;
+  font-size: 15px;
+  line-height: 1.8;
+  margin-bottom: 22px;
+  text-align: center;
+}
+
+/* Caja de cita destacada: origen maya */
+.cita-historia {
+  margin: 32px 0;
+  padding: 28px 26px;
+  background-color: rgba(36, 22, 17, 0.9);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  border-left: 3px solid #d4af37;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.cita-historia p {
+  margin-bottom: 0;
+  color: #e0d0b0;
+  font-size: 16px;
+  line-height: 1.8;
+  font-style: italic;
+}
+
+.cita-historia strong {
+  color: #d4af37;
+  font-weight: 700;
+  font-style: normal;
+  letter-spacing: 1px;
+}
+
+.contenido-origen .resaltado {
+  text-align: center;
+  font-weight: bold;
+  font-size: 26px;
+  color: #d4af37;
+  margin: 40px 0 30px 0;
+  letter-spacing: 2px;
+  font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif;
+  text-transform: uppercase;
+}
+
+/* Sección Sucursales con Animaciones */
+.seccion-sucursales {
+  max-width: 1050px;
+  margin: 80px auto;
+  padding: 0 20px;
+}
+
+.seccion-sucursales h2 {
+  text-align: center;
+  color: #e6c280;
+  font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+}
+
+.subtitulo-sucursales {
+  text-align: center;
+  color: #ccc;
+  font-size: 14px;
+  margin-bottom: 40px;
+}
+
+.tarjetas-sucursales {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+  max-width: 1050px;
+  margin: 0 auto;
+}
+
+.tarjeta-sucursal {
+  background-color: rgba(15, 9, 7, 0.8);
+  background-image: linear-gradient(160deg, rgba(212, 175, 55, 0.05) 0%, transparent 55%);
+  border: 1px solid #332018;
+  border-radius: 12px;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
+}
+
+/* Efecto hover: flota 8px, borde dorado encendido y glow */
+.tarjeta-sucursal:hover {
+  transform: translateY(-8px);
+  border-color: #d4af37;
+  box-shadow:
+    0 14px 30px rgba(0, 0, 0, 0.55),
+    0 0 24px rgba(212, 175, 55, 0.35),
+    inset 0 0 18px rgba(212, 175, 55, 0.08);
+}
+
+/* Cabecera: etiqueta + badge de estado */
+.sucursal-cabecera {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.etiqueta-sucursal {
+  color: #e6c280;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: bold;
+  line-height: 1.4;
+}
+
+/* Badge "Abierto" con punto verde pulsante */
+.badge-abierto {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+  background-color: rgba(46, 204, 113, 0.12);
+  border: 1px solid rgba(46, 204, 113, 0.45);
+  color: #6ee79a;
+  font-size: 10px;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 4px 10px;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+
+.punto-verde {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: #2ecc71;
+  box-shadow: 0 0 0 0 rgba(46, 204, 113, 0.7);
+  animation: pulso 1.8s ease-out infinite;
+}
+
+/* Animación CSS pura del punto verde */
+@keyframes pulso {
+  0% {
+    box-shadow: 0 0 0 0 rgba(46, 204, 113, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 9px rgba(46, 204, 113, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(46, 204, 113, 0);
+  }
+}
+
+.tarjeta-sucursal h3 {
+  font-size: 20px;
+  color: #fff;
+  line-height: 1.3;
+}
+
+/* Filas de datos: dirección y horario */
+.dato-sucursal {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  color: #aaa;
+  font-size: 13px;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+.dato-sucursal b {
+  color: #e6c280;
+  font-weight: bold;
+}
+
+.icono-dato {
+  flex-shrink: 0;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* Botón "Cómo llegar" */
+.btn-mapa {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  align-self: flex-start;
+  margin-top: auto;
+  padding: 10px 20px;
+  background-color: transparent;
+  border: 1px solid #d4af37;
+  border-radius: 8px;
+  color: #e6c280;
+  font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+.btn-mapa:hover {
+  background-color: #d4af37;
+  color: #1c120e;
+  box-shadow: 0 6px 18px rgba(212, 175, 55, 0.4);
+  transform: translateY(-2px);
+}
+
+.btn-mapa:focus-visible {
+  outline: 2px solid #ffd23f;
+  outline-offset: 3px;
+}
+
+/* Sección Contacto y Formulario */
+.seccion-contacto {
+  max-width: 950px;
+  margin: 80px auto;
+  padding: 40px 30px;
+  background-color: rgba(15, 9, 7, 0.75);
+  border: 1px solid #332018;
+  border-radius: 8px;
+}
+
+.seccion-contacto h2 {
+  text-align: center;
+  color: #e6c280;
+  font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+}
+
+.subtitulo-contacto {
+  text-align: center;
+  color: #ccc;
+  font-size: 14px;
+  margin-bottom: 40px;
+}
+
+.contenedor-contacto {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: space-between;
+}
+
+/* Formulario */
+.formulario-contacto {
+  flex: 1 1 400px;
+}
+
+.grupo-campo {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.grupo-campo label {
+  color: #e6c280;
+  font-size: 13px;
+  margin-bottom: 8px;
+  letter-spacing: 1px;
+}
+
+.grupo-campo input,
+.grupo-campo textarea {
+  background-color: #1a100c;
+  border: 1px solid #332018;
+  color: #fff;
+  padding: 12px;
+  border-radius: 4px;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  transition: border-color 0.3s ease;
+}
+
+.grupo-campo input:focus,
+.grupo-campo textarea:focus {
+  outline: none;
+  border-color: #e6c280;
+}
+
+/* Botón Enviar Mensaje con Animación */
+.boton-enviar {
+  background-color: #e6c280;
+  color: #000;
+  border: none;
+  padding: 12px 25px;
+  font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif;
+  font-weight: bold;
+  font-size: 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  letter-spacing: 1px;
+  width: 100%;
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.boton-enviar:hover {
+  background-color: #d4ae6e;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 15px rgba(230, 194, 128, 0.3);
+}
+
+/* Correo corporativo (texto plano, sin enlace) */
+.correo-texto {
+  color: #e6c280;
+  word-break: break-all;
+}
+
+/* Info relevante */
+.info-contacto {
+  flex: 1 1 300px;
+  background-color: #241611;
+  padding: 25px;
+  border: 1px solid #332018;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.info-contacto h3 {
+  color: #e6c280;
+  font-size: 18px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #332018;
+  padding-bottom: 10px;
+}
+
+.item-info {
+  margin-bottom: 18px;
+}
+
+.item-info strong {
+  color: #e6c280;
+  font-size: 13px;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.item-info p {
+  color: #ccc;
+  font-size: 14px;
+  font-family: Arial, sans-serif;
+}
+
+/* Pie de página */
+.pie-pagina {
+  text-align: center;
+  padding: 30px 20px 10px 20px;
+  border-top: 1px solid #332018;
+  margin-top: 60px;
+  color: #aaa;
+  font-size: 13px;
+}
+
+.pie-pagina p {
+  margin-bottom: 8px;
+}
+
+.pie-pagina strong {
+  color: #e6c280;
+}
+
+/* Mascota flotante (esquina inferior derecha) */
+.mascota-flotante {
+  position: fixed;
+  bottom: 0;
+  right: -30px;
+  width: 340px;
+  height: auto;
+  z-index: 100;
+  cursor: pointer;
+  filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.6));
+  animation: flotar 3s ease-in-out infinite;
+  transition: transform 0.3s ease;
+}
+
+.mascota-flotante:hover {
+  transform: scale(1.08);
+}
+
+@keyframes flotar {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+/* DISEÑO RESPONSIVO (ADAPTACIÓN A CELULARES) */
+@media (max-width: 768px) {
+.encabezado {
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 14px;
+  }
+
+  .menu a {
+    margin: 0 8px;
+    font-size: 13px;
+  }
+
+  .portada {
+    padding: 35px 15px 45px 15px;
+  }
+
+  .logo-hero {
+    max-width: 400px;
+  }
+
+  .mascota-flotante {
+    width: 200px;
+  }
+
+.lista-chocolates {
+    grid-template-columns: 1fr;
+  }
+
+  .seccion-coleccion {
+    margin: 40px 15px;
+    padding: 0;
+  }
+
+  .subtitulo-coleccion {
+    margin-bottom: 30px;
+  }
+
+  .coleccion-destacada {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    padding: 20px;
+  }
+
+  .coleccion-info h3 {
+    font-size: 22px;
+  }
+
+  .coleccion-precio .precio-valor {
+    font-size: 26px;
+  }
+
+  .caja-chocolate {
+    width: 100%;
+    max-width: 380px;
+    justify-self: center;
+  }
+
+  .tarjetas-sucursales {
+    grid-template-columns: 1fr;
+    max-width: 380px;
+    margin: 0 auto;
+  }
+
+  .btn-mapa {
+    align-self: stretch;
+  }
+
+  .contenedor-historia-bandito {
+    margin: 40px 15px;
+  }
+
+  .seccion-origen {
+    padding: 32px 20px;
+  }
+
+  .contenido-origen .resaltado {
+    font-size: 21px;
+    margin: 30px 0 25px 0;
+  }
+
+  .cita-historia {
+    padding: 22px 18px;
+  }
+
+  .cita-historia p {
+    font-size: 15px;
+  }
+
+  .seccion-contacto {
+    margin: 40px 15px;
+    padding: 25px 20px;
+  }
+
+  .contenedor-contacto {
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+
+/* ==========================================
+   MENÚ EN PANTALLAS MÓVILES (solo <= 768px)
+   ========================================== */
+@media (max-width: 768px) {
+  .encabezado {
+    padding: 8px 5px;
+  }
+
+  .menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    padding: 5px;
+  }
+
+  .menu a {
+    font-size: 0.72rem;
+    letter-spacing: 1px;
+    padding: 6px 12px;
+    margin: 0; /* Anula el margen del bloque móvil anterior */
+    border: 1px solid rgba(212, 175, 55, 0.7); /* Borde delgado dorado */
+    border-radius: 4px; /* Forma de botón sutil */
+    background: rgba(15, 15, 15, 0.8);
+    white-space: nowrap;
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+
+  /* El separador blanco de escritorio estorba el botón dorado */
+  .menu a + a {
+    border-left: 1px solid rgba(212, 175, 55, 0.7);
+    padding-left: 12px;
+  }
+
+  .menu a:active,
+  .menu a:hover {
+    border-color: #d4af37;
+    background: #d4af37;
+    color: #000;
+  }
+}
+/* ==========================================
+   CAJA COLECCIÓN DE BOMBONES — Tarjeta + Modal
+   Modal 100% CSS con el selector :target
+   ========================================== */
+
+/* --- Tarjeta destacada en el catálogo --- */
+.caja-destacada {
+  border-color: rgba(212, 175, 55, 0.55);
+  box-shadow: 0 10px 30px rgba(212, 175, 55, 0.12);
+}
+
+.caja-destacada:hover {
+  border-color: #d4af37;
+  box-shadow: 0 16px 38px rgba(212, 175, 55, 0.28);
+}
+
+/* --- Overlay: oculto por defecto (CSS puro, sin JavaScript) --- */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(5px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 9999;
+}
+
+/* --- Se abre cuando el ancla tiene :target --- */
+#modal-bombones:target,
+.modal-overlay:target {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+/* --- Cuadro de la ventana --- */
+.modal-caja {
+  position: relative;
+  width: 100%;
+  max-width: 720px;
+  max-height: 90vh;
+  overflow-y: auto;
+  background-color: #0d0b09;
+  background-image: linear-gradient(165deg, rgba(212, 175, 55, 0.07) 0%, transparent 45%);
+  border: 1px solid rgba(212, 175, 55, 0.45);
+  border-radius: 14px;
+  padding: 38px 32px 30px;
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.7), 0 0 40px rgba(212, 175, 55, 0.15);
+  transform: translateY(28px) scale(0.97);
+  transition: transform 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.modal-overlay:target .modal-caja {
+  transform: translateY(0) scale(1);
+}
+
+#modal-bombones:target .modal-caja {
+  transform: translateY(0) scale(1);
+}
+
+/* Scrollbar discreto */
+.modal-caja::-webkit-scrollbar { width: 8px; }
+.modal-caja::-webkit-scrollbar-track { background: #14100d; }
+.modal-caja::-webkit-scrollbar-thumb { background: #d4af37; border-radius: 4px; }
+
+/* --- Botón de cerrar --- */
+.modal-cerrar {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  z-index: 3;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(212, 175, 55, 0.1);
+  border: 1px solid #d4af37;
+  border-radius: 50%;
+  color: #e6c280;
+  font-size: 15px;
+  line-height: 1;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.modal-cerrar:hover {
+  background-color: #d4af37;
+  color: #1c120e;
+  transform: rotate(90deg);
+}
+
+/* --- Cabecera --- */
+.modal-cabecera {
+  text-align: center;
+  padding-bottom: 22px;
+  margin-bottom: 24px;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.25);
+}
+
+.modal-kicker {
+  display: inline-block;
+  background-color: #d4af37;
+  color: #1c120e;
+  font-family: Arial, sans-serif;
+  font-size: 10px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 4px 12px;
+  border-radius: 20px;
+  margin-bottom: 14px;
+}
+
+.modal-cabecera h2 {
+  font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif;
+  font-size: 26px;
+  color: #E8D3A3;
+  line-height: 1.3;
+  margin-bottom: 8px;
+}
+
+.modal-eslogan {
+  font-family: Georgia, serif;
+  font-style: italic;
+  font-size: 15px;
+  color: #e6c280;
+  opacity: 0.9;
+}
+
+/* Texto secundario dentro de un h3 del modal */
+.modal-sub {
+  font-family: Arial, sans-serif;
+  font-size: 11px;
+  font-weight: normal;
+  letter-spacing: 0.5px;
+  text-transform: none;
+  color: #aaa;
+  opacity: 0.85;
+}
+
+/* --- Bloques de texto --- */
+.modal-bloque {
+  margin-bottom: 24px;
+}
+
+.modal-bloque h3 {
+  font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif;
+  font-size: 15px;
+  color: #e6c280;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.modal-bloque > p {
+  color: #ccc;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* --- Lista de sabores --- */
+.lista-sabores {
+  list-style: none;
+  display: grid;
+  gap: 12px;
+}
+
+.sabor {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background-color: rgba(36, 22, 17, 0.75);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  border-radius: 10px;
+  padding: 14px 16px;
+  transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.sabor:hover {
+  border-color: #d4af37;
+  transform: translateX(4px);
+}
+
+.sabor-punto {
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.sabor-negro     .sabor-punto { background: radial-gradient(circle at 32% 30%, #4A2C17, #1A0D06); }
+.sabor-vainilla  .sabor-punto { background: radial-gradient(circle at 32% 30%, #FFF6DC, #DFC287); }
+.sabor-crunche   .sabor-punto { background: radial-gradient(circle at 32% 30%, #D9A05B, #A2611F); }
+.sabor-mani      .sabor-punto { background: radial-gradient(circle at 32% 30%, #E8C89A, #B07C41); }
+
+.sabor-texto {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.sabor-texto strong {
+  font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif;
+  font-size: 14px;
+  color: #E8D3A3;
+  letter-spacing: 0.5px;
+}
+
+.sabor-texto span {
+  font-family: Arial, sans-serif;
+  font-size: 12.5px;
+  color: #aaa;
+  line-height: 1.55;
+}
+
+/* --- Detalles del producto --- */
+.lista-detalles {
+  list-style: none;
+  border-top: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.lista-detalles li {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 11px 2px;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.14);
+  font-family: Arial, sans-serif;
+  font-size: 13.5px;
+  line-height: 1.6;
+}
+
+.det-label {
+  flex-shrink: 0;
+  color: #e6c280;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+.det-valor {
+  color: #ccc;
+  text-align: right;
+}
+
+/* --- Boton de pedido (enlace interno a #contacto) --- */
+.btn-pedir {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  padding: 15px 26px;
+  background-color: #1f7a4d;
+  border: 1px solid #2ea86a;
+  border-radius: 8px;
+  color: #ffffff;
+  font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+.btn-pedir:hover {
+  background-color: #24995e;
+  box-shadow: 0 8px 22px rgba(46, 168, 106, 0.45);
+  transform: translateY(-2px);
+}
+
+.btn-pedir:focus-visible {
+  outline: 2px solid #ffd23f;
+  outline-offset: 3px;
+}
+
+/* --- Pie del modal --- */
+.modal-pie {
+  padding-top: 22px;
+  border-top: 1px solid rgba(212, 175, 55, 0.25);
+}
+
+/* --- Responsive del modal --- */
+@media (max-width: 768px) {
+  .modal-caja {
+    padding: 30px 18px 24px;
+    max-height: 88vh;
+  }
+
+  .modal-cabecera h2 {
+    font-size: 20px;
+  }
+
+.sabor {
+    flex-wrap: wrap;
+  }
+
+  .lista-detalles li {
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .det-valor {
+    text-align: left;
+  }
+}

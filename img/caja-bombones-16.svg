@@ -1,0 +1,143 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <defs>
+    <linearGradient id="bgB" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0F3D2C"/>
+      <stop offset="0.5" stop-color="#0A2C21"/>
+      <stop offset="1" stop-color="#061A13"/>
+    </linearGradient>
+    <linearGradient id="boxTop" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#12513A"/>
+      <stop offset="0.55" stop-color="#0D3B2E"/>
+      <stop offset="1" stop-color="#092A20"/>
+    </linearGradient>
+    <linearGradient id="boxSide" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0A2E23"/>
+      <stop offset="1" stop-color="#05170F"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F0D76E"/>
+      <stop offset="0.5" stop-color="#E2C044"/>
+      <stop offset="1" stop-color="#B8912A"/>
+    </linearGradient>
+    <linearGradient id="goldSphere" x1="0.3" y1="0" x2="0.7" y2="1">
+      <stop offset="0" stop-color="#FFF0B8"/>
+      <stop offset="0.35" stop-color="#E2C044"/>
+      <stop offset="1" stop-color="#9A7520"/>
+    </linearGradient>
+    <radialGradient id="glowB" cx="0.5" cy="0.35" r="0.65">
+      <stop offset="0" stop-color="#E2C044" stop-opacity="0.16"/>
+      <stop offset="1" stop-color="#E2C044" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="800" height="600" fill="url(#bgB)"/>
+  <rect width="800" height="600" fill="url(#glowB)"/>
+  <rect x="0" y="470" width="800" height="130" fill="#04120D"/>
+  <ellipse cx="400" cy="482" rx="290" ry="30" fill="#000" opacity="0.5"/>
+
+  <!-- Mapache chef (detrás, asomando) -->
+  <g transform="translate(400,150)">
+    <!-- orejas -->
+    <polygon points="-58,-42 -74,-92 -34,-58" fill="#3B3B44"/>
+    <polygon points="58,-42 74,-92 34,-58" fill="#3B3B44"/>
+    <polygon points="-56,-46 -66,-80 -40,-58" fill="#C98B9B"/>
+    <polygon points="56,-46 66,-80 40,-58" fill="#C98B9B"/>
+    <!-- cabeza -->
+    <ellipse cx="0" cy="0" rx="76" ry="66" fill="#4A4A55"/>
+    <!-- antifaz -->
+    <path d="M-76 -6 q20 -22 40 -8 q20 12 36 2 q16 -12 36 -2 q20 12 40 8 z" fill="#1F1F26"/>
+    <!-- ojos -->
+    <circle cx="-30" cy="-18" r="9" fill="#F5F0E4"/>
+    <circle cx="30" cy="-18" r="9" fill="#F5F0E4"/>
+    <circle cx="-28" cy="-18" r="4.5" fill="#14141A"/>
+    <circle cx="28" cy="-18" r="4.5" fill="#14141A"/>
+    <!-- hocico -->
+    <ellipse cx="0" cy="26" rx="30" ry="24" fill="#E8E2D4"/>
+    <ellipse cx="0" cy="16" rx="11" ry="8" fill="#1F1F26"/>
+    <path d="M0 22 q-8 14 -16 6 M0 22 q8 14 16 6" stroke="#1F1F26" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    <!-- gorro de chef -->
+    <path d="M-52 -48 q10 -46 52 -46 q42 0 52 46 z" fill="#F7F4EC"/>
+    <rect x="-58" y="-52" width="116" height="16" rx="6" fill="#EFEAE0"/>
+    <path d="M-26 -84 q26 -14 52 0" stroke="#DDD6C6" stroke-width="3" fill="none"/>
+  </g>
+
+  <!-- Caja abierta (perspectiva) -->
+  <g transform="translate(400,352)">
+    <!-- pared trasera -->
+    <path d="M-250 -84 L0 -140 L250 -84 L250 20 L-250 20 Z" fill="url(#boxSide)"/>
+    <path d="M-250 -84 L0 -140 L250 -84 L0 -28 Z" fill="#0D3B2E"/>
+    <path d="M-250 -84 L0 -140 L250 -84" fill="none" stroke="url(#gold)" stroke-width="3"/>
+
+    <!-- interior 4x4 -->
+    <g transform="translate(0,-8)">
+      <!-- celdas -->
+      <g fill="#072018" stroke="#C4A52A" stroke-opacity="0.35" stroke-width="1">
+        <rect x="-216" y="-104" width="102" height="34" rx="4"/>
+        <rect x="-108" y="-104" width="102" height="34" rx="4"/>
+        <rect x="0" y="-104" width="102" height="34" rx="4"/>
+        <rect x="108" y="-104" width="102" height="34" rx="4"/>
+        <rect x="-216" y="-64" width="102" height="34" rx="4"/>
+        <rect x="-108" y="-64" width="102" height="34" rx="4"/>
+        <rect x="0" y="-64" width="102" height="34" rx="4"/>
+        <rect x="108" y="-64" width="102" height="34" rx="4"/>
+        <rect x="-216" y="-24" width="102" height="34" rx="4"/>
+        <rect x="-108" y="-24" width="102" height="34" rx="4"/>
+        <rect x="0" y="-24" width="102" height="34" rx="4"/>
+        <rect x="108" y="-24" width="102" height="34" rx="4"/>
+        <rect x="-216" y="16" width="102" height="34" rx="4"/>
+        <rect x="-108" y="16" width="102" height="34" rx="4"/>
+        <rect x="0" y="16" width="102" height="34" rx="4"/>
+        <rect x="108" y="16" width="102" height="34" rx="4"/>
+      </g>
+
+      <!-- Fila 1: Trufa Frutos Rojos (rojo/rosa) -->
+      <g fill="#C2185B">
+        <circle cx="-165" cy="-87" r="14"/><circle cx="-57" cy="-87" r="14"/>
+        <circle cx="51" cy="-87" r="14"/><circle cx="159" cy="-87" r="14"/>
+      </g>
+      <g fill="#E75480" opacity="0.75">
+        <circle cx="-169" cy="-91" r="5"/><circle cx="-61" cy="-91" r="5"/>
+        <circle cx="47" cy="-91" r="5"/><circle cx="155" cy="-91" r="5"/>
+      </g>
+
+      <!-- Fila 2: Trufa Herbal Matcha (verde) -->
+      <g fill="#6B8E23">
+        <circle cx="-165" cy="-47" r="14"/><circle cx="-57" cy="-47" r="14"/>
+        <circle cx="51" cy="-47" r="14"/><circle cx="159" cy="-47" r="14"/>
+      </g>
+      <g fill="#9CBF4A" opacity="0.7">
+        <circle cx="-169" cy="-51" r="5"/><circle cx="-61" cy="-51" r="5"/>
+        <circle cx="47" cy="-51" r="5"/><circle cx="155" cy="-51" r="5"/>
+      </g>
+
+      <!-- Fila 3: Esfera Dorada (oro) -->
+      <g fill="url(#goldSphere)">
+        <circle cx="-165" cy="-7" r="14"/><circle cx="-57" cy="-7" r="14"/>
+        <circle cx="51" cy="-7" r="14"/><circle cx="159" cy="-7" r="14"/>
+      </g>
+      <g fill="#FFF6D0" opacity="0.85">
+        <circle cx="-169" cy="-11" r="4.5"/><circle cx="-61" cy="-11" r="4.5"/>
+        <circle cx="47" cy="-11" r="4.5"/><circle cx="155" cy="-11" r="4.5"/>
+      </g>
+
+      <!-- Fila 4: Trufa Cacao Intenso 70% (marrón oscuro) -->
+      <g fill="#3E2317">
+        <circle cx="-165" cy="33" r="14"/><circle cx="-57" cy="33" r="14"/>
+        <circle cx="51" cy="33" r="14"/><circle cx="159" cy="33" r="14"/>
+      </g>
+      <g fill="#6B4423" opacity="0.8">
+        <circle cx="-169" cy="29" r="4.5"/><circle cx="-61" cy="29" r="4.5"/>
+        <circle cx="47" cy="29" r="4.5"/><circle cx="155" cy="29" r="4.5"/>
+      </g>
+    </g>
+
+    <!-- Franja dorada frontal -->
+    <rect x="-250" y="20" width="500" height="44" fill="#0A2E23"/>
+    <rect x="-250" y="20" width="500" height="5" fill="url(#gold)"/>
+    <rect x="-250" y="59" width="500" height="5" fill="url(#gold)"/>
+    <text x="0" y="49" text-anchor="middle" font-family="Georgia,serif" font-size="22" fill="url(#gold)" letter-spacing="9">KA'KAU</text>
+    <text x="176" y="49" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#C4A52A" letter-spacing="2">16 BOMBONES</text>
+  </g>
+
+  <text x="400" y="556" text-anchor="middle" font-family="Georgia,serif" font-style="italic" font-size="19" fill="#E6C280" letter-spacing="1.5">"Three or four? There's always room for more."</text>
+</svg>
