@@ -284,10 +284,14 @@ body {
 
 .caja-chocolate p {
   color: #E8D3A3;
-  font-size: 13.5px;
-  line-height: 1.65;
+  font-size: 14px;
+  line-height: 1.4;
   margin-bottom: 18px;
   opacity: 0.9;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 /* Línea divisoria dorada sobre precio y botón */
