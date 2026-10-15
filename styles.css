@@ -151,9 +151,17 @@ body {
 }
 
 .lista-chocolates {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 30px;
+}
+
+@media (min-width: 769px) {
+  .lista-chocolates > .caja-chocolate {
+    flex: 1 1 300px;
+    max-width: 340px;
+  }
 }
 
 /* Tarjeta del chocolate con animación */
