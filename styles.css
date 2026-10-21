@@ -520,41 +520,15 @@ body {
   text-align: center;
 }
 
-/* Caja de cita destacada: origen maya */
-.cita-historia {
-  margin: 32px 0;
-  padding: 28px 26px;
-  background-color: rgba(36, 22, 17, 0.9);
-  border: 1px solid rgba(212, 175, 55, 0.3);
-  border-left: 3px solid #d4af37;
-  border-radius: 12px;
-  text-align: center;
-}
-
-.cita-historia p {
-  margin-bottom: 0;
-  color: #e0d0b0;
-  font-size: 16px;
-  line-height: 1.8;
-  font-style: italic;
-}
-
-.cita-historia strong {
-  color: #d4af37;
-  font-weight: 700;
-  font-style: normal;
-  letter-spacing: 1px;
-}
-
+/* Párrafo de cierre destacado */
 .contenido-origen .resaltado {
   text-align: center;
   font-weight: bold;
-  font-size: 26px;
+  font-size: 20px;
   color: #d4af37;
   margin: 40px 0 30px 0;
-  letter-spacing: 2px;
+  line-height: 1.6;
   font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif;
-  text-transform: uppercase;
 }
 
 /* Sección Sucursales con Animaciones */
@@ -987,16 +961,8 @@ body {
   }
 
   .contenido-origen .resaltado {
-    font-size: 21px;
+    font-size: 18px;
     margin: 30px 0 25px 0;
-  }
-
-  .cita-historia {
-    padding: 22px 18px;
-  }
-
-  .cita-historia p {
-    font-size: 15px;
   }
 
   .seccion-contacto {
